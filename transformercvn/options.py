@@ -137,10 +137,10 @@ class Options(Namespace):
 
         self.event_prong_loss_proportion: float = 0.5
 
-        # Current Used as the additional weight provided to the neutral target!!!
+        # Not implemented. Previously used to upweight the neutral current class in CB_loss.
         self.loss_beta: float = 2.5
 
-        # Exponent in the focal loss term (1 - p)
+        # Exponent in the focal loss term (1 - p). If 0, simple cross-entropy is used.
         self.loss_gamma: float = 0.0
 
         # Standard deviation of the noise to add to pixel-maps
